@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+.Nav {
+	background-color: #FFF;
+	overflow-y: auto;
+	width: 100%;
+	position: fixed;
+	top:0px;
+	left:0px;
+	z-index:1000;
+	letter-spacing: 2px;
+	border: 5px solid #FFF;
+
+}
+
+.Nav ul {
+	text-align: center;
+}
+
+.Nav li {
+	display: inline-block;
+	font-family: Raleway, Verdana, sans-serif;
+	font-size:24px;
+	text-align: left;
+	font-weight: 700;
+	text-transform: lowercase;
+	padding: 0 40px;
+	border-left: 1px solid #000;
+	border-right: 1px solid #000;
+	line-height: 32px;
+}
+
+.Nav li:hover {
+	background-color:#EEE;
+	line-height: 28px;
+	border-top: 2px solid gold;
+	border-bottom: 2px solid gold;
+}
+
+#Resume {
+	background-color:#FFF;
+	line-height: 28px;
+	border-top: 2px solid gold;
+	border-bottom: 2px solid gold;
+}
+
+a:link {
+	text-decoration: none;
+}
+a:hover {
+	color: #60F;
+}
+
+.welcome {
+	background-color: #FFF;
+	font-family: Georgia;
+	padding: 40px;
+	width:100%;
+	margin-top:50px;
+}
+
+h3 {
+	margin: auto;
+	display: block;
+	text-align: center;
+	padding: 20px 0px 20px 0px;
+}
+
+body {
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
+h1 {
+	color: MidnightBlue;
+	margin: auto;
+	display: block;
+	text-align: center;
+}
+
+.container {
+	margin-left:auto;
+	margin-right: auto;
+	padding: 10px;
+	border: 3px solid #FFF;
+	background-color: #FFF;
+	position: absolute;
+	width:100%;
+}
+
+embed {
+	overflow-x: hidden;
+	overflow-y: hidden;
+	margin: 0 10%;
+	width:80%;
+}
+
+.content {
+	/*: url(http://mcgill.ca/newsroom/files/newsroom/channels/image/montreal-1.jpg) no-repeat center bottom; 
+	background-size: cover;
+    background-attachment:fixed;*/
+	width:80%;
+	position: absolute;
+	top:45%;
+	left: 12%;
+	height: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 40px;
+
+}
+
+.footer {
+	border-top: 1px solid black;
+	font-color:black;
+	font-size: 20px;
+	line-height: 30px;
+	text-align: center;
+	z-index:2000;
+	width: 100%;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 20px;
+    height:20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+.icons {
+	/*border: 1px solid black;*/
+	margin: 0 auto;
+	margin-top: 40px;
+
+}
+
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+    display:inline-block;
+    position: relative;
+    left:30%;
+
+}
+.fa-linkedin {
+	background: #FFF;
+
+}
+.fa-github {
+	background: #FFF;
+}
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+    display:inline-block;
+    position: relative;
+    left: 55%;
+}
+/* {
+		border: 1px solid black;
+}*/
