@@ -100,7 +100,7 @@ embed {
     background-attachment:fixed;*/
 	width:80%;
 	position: absolute;
-	top:45%;
+	top:30%;
 	left: 12%;
 	height: 800px;
 	margin-left: auto;
@@ -108,7 +108,9 @@ embed {
 	margin-bottom: 40px;
 
 }
-
+.CV {
+	margin-bottom: 30px;
+}
 .footer {
 	border-top: 1px solid black;
 	font-color:black;

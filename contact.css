@@ -36,13 +36,6 @@
 	border-bottom: 2px solid gold;
 }
 
-#About {
-	background-color:#FFF;
-	line-height: 28px;
-	border-top: 2px solid gold;
-	border-bottom: 2px solid gold;
-}
-
 a:link {
 	text-decoration: none;
 }
@@ -50,38 +43,32 @@ a:hover {
 	color: #60F;
 }
 
+.contact {
+	background-color: #EEE;
+}
+.contact li {
+	font-family: Helvetica, sans-serif;
+	font-size: 2em;
+	padding: 30px;
+	display: inline-block;
+	margin: auto;
+}
+
+h3 {
+	margin: auto;
+	display: block;
+	text-align: center;
+	padding: 20px 0px 20px 0px;
+}
+
 body {
 	max-width: 100%;
 	overflow-x: hidden;
 }
 
-
-h2 {
-	color: black;
-	text-align: center;
-}
-
-p {
-	color: black;
-	text-align: left;
-	font-family: Verdana;
-	padding: 20px 0px;
-
-}
-
-img {
-    display: block;
-    margin: auto;
-    margin-top: 78px;
-    width: 16%;
-	border-radius: 50%;
-	border: 3px solid black;
-	z-index: 999;
-
-}
-
 .container {
-	margin: 30px auto;
+	margin-left:auto;
+	margin-right: auto;
 	padding: 10px;
 	border: 3px solid #FFF;
 	background-color: #FFF;
@@ -89,20 +76,21 @@ img {
 	width:100%;
 }
 
-
-
 .content {
 	/*: url(http://mcgill.ca/newsroom/files/newsroom/channels/image/montreal-1.jpg) no-repeat center bottom; 
 	background-size: cover;
     background-attachment:fixed;*/
 	width:80%;
 	position: absolute;
-	top:45%;
+	top:30%;
 	left: 12%;
 	height: 800px;
 	margin-left: auto;
 	margin-right: auto;
 
+}
+.contact {
+	font-size:25px;
 }
 
 .footer {
@@ -114,7 +102,6 @@ img {
 	z-index:2000;
 	width: 100%;
 }
-
 .fa {
     padding: 20px;
     width: 20px;
@@ -140,23 +127,37 @@ img {
 	color: white;
 	display: inline-block;
 	position:relative;
-	left:40%;
-
 }
 .fa-github {
 	background: #333;
 	color:white;
 	display:inline-block;
     position: relative;
-    left:30%;
 }
 .fa-twitter {
     background: #55ACEE;
     color: white;
     display:inline-block;
     position: relative;
-    left: 50%;
+
 }
-/* {
-		border: 1px solid black;
-}*/
+
+.icons .fa-linkedin {
+	left: 40%;
+}
+.icons .fa-github {
+	left: 30%;
+}
+.icons .fa-twitter {
+	left: 50%;
+}
+
+.contact .fa-linkedin {
+	margin: 0 100px;
+}
+.contact .fa-github {
+	margin: 0 100px;
+}
+.contact .fa-twitter {
+	margin: 0 100px;
+}
