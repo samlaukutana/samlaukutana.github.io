@@ -19,14 +19,14 @@
 .Nav li {
 	display: inline-block;
 	font-family: Raleway, Verdana, sans-serif;
-	font-size:24px;
+	font-size:1.5em;
 	text-align: left;
 	font-weight: 700;
 	text-transform: lowercase;
-	padding: 0 40px;
+	padding: 0 2.5em;
 	border-left: 1px solid #000;
 	border-right: 1px solid #000;
-	line-height: 32px;
+	line-height: 2em;
 }
 
 .Nav li:hover {
@@ -53,16 +53,16 @@ a:hover {
 .welcome {
 	background-color: #FFF;
 	font-family: Georgia;
-	padding: 40px;
+	padding: 2.5em;
 	width:100%;
-	margin-top:50px;
+	margin-top:4em;
 }
 
 h3 {
 	margin: auto;
 	display: block;
 	text-align: center;
-	padding: 20px 0px 20px 0px;
+	padding: 1.25em 0px 1.25em 0px;
 }
 
 body {
@@ -80,7 +80,7 @@ h1 {
 .container {
 	margin-left:auto;
 	margin-right: auto;
-	padding: 10px;
+	padding: .5em;
 	border: 3px solid #FFF;
 	background-color: #FFF;
 	position: absolute;
@@ -102,30 +102,29 @@ embed {
 	position: absolute;
 	top:30%;
 	left: 12%;
-	height: 800px;
+	height: 50em;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 40px;
+	margin-bottom: 2.5em;
 
 }
 .CV {
-	margin-bottom: 60px;
-	border: 20px solid #DDD;
+	margin-bottom: 4em;
 }
 .footer {
 	border-top: 1px solid black;
 	font-color:black;
-	font-size: 20px;
-	line-height: 30px;
+	font-size: 1.25em;
+	line-height: 2em;
 	text-align: center;
 	z-index:2000;
 	width: 100%;
 }
 
 .fa {
-    padding: 20px;
-    width: 20px;
-    height:20px;
+    padding: 1.25em;
+    width: 1.25em;
+    height:1.25em;
     text-align: center;
     text-decoration: none;
     border-radius: 5px;
@@ -135,8 +134,7 @@ embed {
 .icons {
 	/*border: 1px solid black;*/
 	margin: 0 auto;
-	margin-top: 40px;
-	font-size:25px;
+	margin-top: 2.5em;
 
 }
 

@@ -105,6 +105,27 @@ img {
 
 }
 
+h3 {
+	font-family: Raleway, Verdana, sans-serif;
+	font-size: 1.5em;
+	letter-spacing: .1em;
+}
+
+#schoollist li {
+	padding: .5em;
+	font-family: Raleway, Verdana, sans-serif;
+}
+
+#worklist li {
+	padding: .5em;
+	font-family: Raleway, Verdana, sans-serif;	
+}
+
+p {
+	font-family: Verdana, sans-serif;
+	font-size: 1.2em;
+}
+
 .footer {
 	border-top: 1px solid black;
 	font-color:black;
