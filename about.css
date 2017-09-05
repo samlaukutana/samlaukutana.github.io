@@ -60,7 +60,7 @@ body {
 /*	background: url(http://mcgill.ca/newsroom/files/newsroom/channels/image/montreal-1.jpg) no-repeat center bottom; 
 	background-size: cover;
     background-attachment:fixed;*/
-	  background: red; /* For browsers that do not support gradients */
+	  background: white; /* For browsers that do not support gradients */
 	  background: -webkit-radial-gradient(#DDD, white, white); /* Safari 5.1 to 6.0 */
 	  background: -o-radial-gradient(#DDD, white, white); /* For Opera 11.6 to 12.0 */
 	  background: -moz-radial-gradient(#DDD, white, white); /* For Firefox 3.6 to 15 */
