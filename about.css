@@ -55,6 +55,17 @@ body {
 	overflow-x: hidden;
 }
 
+.portrait {
+
+/*	background: url(http://mcgill.ca/newsroom/files/newsroom/channels/image/montreal-1.jpg) no-repeat center bottom; 
+	background-size: cover;
+    background-attachment:fixed;*/
+	  background: red; /* For browsers that do not support gradients */
+	  background: -webkit-radial-gradient(#DDD, white, white); /* Safari 5.1 to 6.0 */
+	  background: -o-radial-gradient(#DDD, white, white); /* For Opera 11.6 to 12.0 */
+	  background: -moz-radial-gradient(#DDD, white, white); /* For Firefox 3.6 to 15 */
+	  background: radial-gradient(#DDD, white, white); /* Standard syntax */
+}
 
 h2 {
 	color: black;
@@ -73,7 +84,7 @@ img {
     display: block;
     margin: auto;
     margin-top: 78px;
-    width: 16%;
+    width: 15%;
 	border-radius: 50%;
 	border: 3px solid black;
 	z-index: 999;
@@ -97,12 +108,31 @@ img {
     background-attachment:fixed;*/
 	width:80%;
 	position: absolute;
-	top:45%;
+	top:50%;
 	left: 12%;
 	height: 800px;
 	margin-left: auto;
 	margin-right: auto;
 
+}
+
+.leftside {
+	width:45%;
+	float:left;
+	clear: both;
+}
+.rightside {
+	padding-right: 5%;
+	width:45%;
+	float:right;
+	font-family: Raleway, Verdana, sans-serif;	
+}
+.rightside li {
+	padding:.5em;
+}
+.bottom {
+	float: left;
+	clear:both;
 }
 
 h3 {
@@ -121,12 +151,18 @@ h3 {
 	font-family: Raleway, Verdana, sans-serif;	
 }
 
-p {
+.bottom p {
 	font-family: Verdana, sans-serif;
-	font-size: 1.2em;
+	font-size: 1.1em;
+	background-color: #DDD;
+	padding: 1em;
+	line-height: 1.5em;
+	
 }
 
 .footer {
+	float:left;
+	clear:both;
 	border-top: 1px solid black;
 	font-color:black;
 	font-size: 20px;
@@ -147,14 +183,14 @@ p {
 
 
 .icons {
-	/*border: 1px solid black;*/
+	width:100%;
+	float:left;
+	clear:both;
 	margin: 0 auto;
 	margin-top: 40px;
 	font-size:25px;
 
 }
-
-
 
 .fa-linkedin {
 	background: #0077B5;
@@ -178,6 +214,3 @@ p {
     position: relative;
     left: 50%;
 }
-/* {
-		border: 1px solid black;
-}*/
