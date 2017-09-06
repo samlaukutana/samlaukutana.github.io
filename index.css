@@ -30,14 +30,22 @@
 }
 
 .Nav li:hover {
-	background-color:#EEE;
+	background: #EEE; /* For browsers that do not support gradients */
+	background: -webkit-radial-gradient(white, white, gold); /* Safari 5.1 to 6.0 */
+	background: -o-radial-gradient(white, white, gold); /* For Opera 11.6 to 12.0 */
+	background: -moz-radial-gradient(white, white, gold); /* For Firefox 3.6 to 15 */
+	background: radial-gradient(white, white, gold); /* Standard syntax */
 	line-height: 28px;
 	border-top: 2px solid gold;
 	border-bottom: 2px solid gold;
 }
 
 #Home {
-	background-color:#FFF;
+	background: #EEE; /* For browsers that do not support gradients */
+	background: -webkit-radial-gradient(white, white, gold); /* Safari 5.1 to 6.0 */
+	background: -o-radial-gradient(white, white, gold); /* For Opera 11.6 to 12.0 */
+	background: -moz-radial-gradient(white, white, gold); /* For Firefox 3.6 to 15 */
+	background: radial-gradient(white, white, gold); /* Standard syntax */
 	line-height: 28px;
 	border-top: 2px solid gold;
 	border-bottom: 2px solid gold;
@@ -50,13 +58,6 @@ a:hover {
 	color: #60F;
 }
 
-.welcome {
-	background-color: #FFF;
-	font-family: Georgia;
-	padding: 40px;
-	width:100%;
-	margin-top:50px;
-}
 
 h3 {
 	margin: auto;
@@ -106,13 +107,30 @@ p {
     background-attachment:fixed;*/
 	width:80%;
 	position: absolute;
-	top:30%;
+	top:20%;
 	left: 12%;
-	height: 800px;
 	margin-left: auto;
 	margin-right: auto;
 
 }
+
+.Thumbnails li{
+	display: inline-block;
+	
+}
+
+img {
+    border: 1px solid #ddd; /* Gray border */
+    border-radius: 4px;  /* Rounded border */
+    padding: 5px; /* Some padding */
+    width: 150px; /* Set a small width */
+}
+
+/* Add a hover effect (blue shadow) */
+img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
 
 .footer {
 	border-top: 1px solid black;

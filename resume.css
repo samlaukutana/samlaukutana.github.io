@@ -30,14 +30,22 @@
 }
 
 .Nav li:hover {
-	background-color:#EEE;
+	background: #EEE; /* For browsers that do not support gradients */
+	background: -webkit-radial-gradient(white, white, gold); /* Safari 5.1 to 6.0 */
+	background: -o-radial-gradient(white, white, gold); /* For Opera 11.6 to 12.0 */
+	background: -moz-radial-gradient(white, white, gold); /* For Firefox 3.6 to 15 */
+	background: radial-gradient(white, white, gold); /* Standard syntax */
 	line-height: 28px;
 	border-top: 2px solid gold;
 	border-bottom: 2px solid gold;
 }
 
 #Resume {
-	background-color:#FFF;
+	background: #EEE; /* For browsers that do not support gradients */
+	background: -webkit-radial-gradient(white, white, gold); /* Safari 5.1 to 6.0 */
+	background: -o-radial-gradient(white, white, gold); /* For Opera 11.6 to 12.0 */
+	background: -moz-radial-gradient(white, white, gold); /* For Firefox 3.6 to 15 */
+	background: radial-gradient(white, white, gold); /* Standard syntax */
 	line-height: 28px;
 	border-top: 2px solid gold;
 	border-bottom: 2px solid gold;
@@ -95,7 +103,6 @@ embed {
 	position: absolute;
 	top:30%;
 	left: 12%;
-	height: 50em;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 2.5em;
