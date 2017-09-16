@@ -7,9 +7,11 @@
   .Nav {
     background-color: white;
     width: 100%;
-    position: fixed;
-    top: 0px;
-    left: 0px;
+    position: relative;
+    /*
+    top:0px;
+    left:0px;
+    */
     z-index: 1000;
     letter-spacing: 2px; }
     .Nav ul {
@@ -25,7 +27,7 @@
       border-left: 1px solid black;
       border-right: 1px solid black;
       line-height: 16px;
-      width: 30px; }
+      width: 60px; }
       .Nav li:hover {
         background: #EEE;
         /* For browsers that do not support gradients */
