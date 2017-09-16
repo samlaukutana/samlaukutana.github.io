@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+/*Main Variables*/
+$main-bkgrnd: white;
+$main-font-stack: Raleway, Verdana, sans-serif;
+
+
+
+/*Navigation Variables*/
+$radial-gold: $main-bkgrnd,$main-bkgrnd,rgba(255, 199, 0, .5);
+$nav-width: 100%;
+$nav-font-size: 24px;
+$nav-font-weight: 700;
+$nav-borders: 1px solid black;
+$nav-line-height: 32px;
+$nav-item-width: 100px;
+
+
+/*Content Variables*/
+$content-width: 70%;
+$content-offset-left: 17%;
+$content-offset-top: 45%;
+$content-padding: 10px;
+$content-font-size: 14px;
+$thumbnail-width: 150px;
+$footer-font-size: 20px;
+$footer-line-height: 30px;
+$p-line-height:24px;
+
+$radial-bkgrnd: #DDD,white,white;
+
+
+@mixin rad-gradient($radialcolors,$altcolor){
+	
+	background: $altcolor; /* For browsers that do not support gradients */
+	background: -webkit-radial-gradient($radialcolors); /* Safari 5.1 to 6.0 */
+	background: -o-radial-gradient($radialcolors); /* For Opera 11.6 to 12.0 */
+	background: -moz-radial-gradient($radialcolors); /* For Firefox 3.6 to 15 */
+	background: radial-gradient($radialcolors); /* Standard syntax */
+}
+
+
+.Nav {
+	background-color: $main-bkgrnd;
+	width: $nav-width;
+	position: fixed;
+	top:0px;
+	left:0px;
+	z-index:1000;
+	letter-spacing: 2px;
+
+	ul {
+		text-align: center;
+	}
+
+	li {
+		display: inline-block;
+		font-family: $main-font-stack;
+		font-size:$nav-font-size;
+		text-align: center;
+		font-weight: $nav-font-weight;
+		text-transform: lowercase;
+		padding: 0 40px;
+		border-left: $nav-borders;
+		border-right: $nav-borders;
+		line-height: $nav-line-height;
+		width: $nav-item-width;
+
+		&:hover {
+			@include rad-gradient($radial-gold,#EEE);
+		}
+	}
+	#About {
+		@include rad-gradient($radial-gold,#EEE);
+	}
+}
+
+
+/*Code for Main Content*/
+
+img {
+    display: block;
+    margin: auto;
+    margin-top: 78px;
+    width: 15%;
+	border-radius: 50%;
+	border: 3px solid black;
+	z-index: 999;
+}
+
+/*Gets rid of hyperlink underlines*/
+
+a:link {
+	text-decoration: none;
+}
+a:hover {
+	color: #60F;
+}
+
+body {
+	max-width: 100%;
+	overflow-x: hidden;
+
+
+}
+
+
+
+.portrait {
+	@include rad-gradient($radial-bkgrnd,#FFF);
+}
+
+.content {
+	width:$content-width;
+	position: absolute;
+	top: $content-offset-top;
+	left: $content-offset-left;
+	margin: 0 auto;
+	padding: $content-padding;
+	border: 3px solid #FFF;
+	background-color: $main-bkgrnd;
+	font-family: $main-font-stack;
+
+	.leftside {
+		width:45%;
+		float:left;
+		clear: both;
+		font-family: $main-font-stack;	
+
+		.credentials {
+			li {
+				padding: 8pxs;
+			}
+
+		}
+	}
+	.rightside {
+		padding-right: 5%;
+		width:45%;
+		float:right;
+		font-family: $main-font-stack;	
+
+		li {
+			padding: 8px;
+		}
+	}
+
+	.bottom {
+		float: left;
+		clear:both;
+
+		p {
+			font-family: $main-font-stack;
+			font-size: $content-font-size;
+			background-color: #DDD;
+			padding: 16px;
+			line-height: 24px;
+		}
+	}
+
+	.footer {
+		float:left;
+		clear:both;
+		border-top: 1px solid black;
+		font-color:black;
+		font-size: $footer-font-size;
+		line-height: $footer-line-height;
+		text-align: center;
+		z-index:2000;
+		width: 100%;
+	}
+
+	.icons {
+		width:100%;
+		float:left;
+		clear:both;
+		margin: 0 auto;
+		margin-top: 40px;
+		font-size:25px;
+
+		.fa {
+		    padding: 20px;
+		    width: 20px;
+		    height:20px;
+		    text-align: center;
+		    text-decoration: none;
+		    border-radius: 5px;
+		}
+
+		.fa-linkedin {
+			background: #0077B5;
+			color: white;
+			display: inline-block;
+			position:relative;
+			left:40%;
+
+		}
+		.fa-github {
+			background: #333;
+			color:white;
+			display:inline-block;
+		    position: relative;
+		    left:30%;
+		}
+		.fa-twitter {
+		    background: #55ACEE;
+		    color: white;
+		    display:inline-block;
+		    position: relative;
+		    left: 50%;
+		}
+	}
+
+
+}

@@ -1,1 +1,322 @@
-index.scss
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+/*Main Variables*/
+$main-bkgrnd: white;
+$main-font-stack: Raleway, Verdana, sans-serif;
+
+
+
+/*Navigation Variables*/
+$radial-gold: $main-bkgrnd,$main-bkgrnd,rgba(255, 199, 0, .5);
+$nav-width: 100%;
+$nav-font-size: 24px;
+$nav-font-weight: 700;
+$nav-borders: 1px solid black;
+$nav-line-height: 32px;
+$nav-item-width: 100px;
+
+
+/*Content Variables*/
+$content-width: 70%;
+$content-offset-left: 17%;
+$content-offset-top: 10%;
+$content-padding: 10px;
+$thumbnail-width: 150px;
+$footer-font-size: 20px;
+$footer-line-height: 30px;
+$p-line-height:24px;
+
+
+@mixin rad-gradient($radialcolors,$altcolor){
+	
+	background: $altcolor; /* For browsers that do not support gradients */
+	background: -webkit-radial-gradient($radialcolors); /* Safari 5.1 to 6.0 */
+	background: -o-radial-gradient($radialcolors); /* For Opera 11.6 to 12.0 */
+	background: -moz-radial-gradient($radialcolors); /* For Firefox 3.6 to 15 */
+	background: radial-gradient($radialcolors); /* Standard syntax */
+}
+
+
+.Nav {
+	background-color: $main-bkgrnd;
+	width: $nav-width;
+	position: fixed;
+	top:0px;
+	left:0px;
+	z-index:1000;
+	letter-spacing: 2px;
+
+	ul {
+		text-align: center;
+	}
+
+	li {
+		display: inline-block;
+		font-family: $main-font-stack;
+		font-size:$nav-font-size;
+		text-align: center;
+		font-weight: $nav-font-weight;
+		text-transform: lowercase;
+		padding: 0 40px;
+		border-left: $nav-borders;
+		border-right: $nav-borders;
+		line-height: $nav-line-height;
+		width: $nav-item-width;
+
+		&:hover {
+			@include rad-gradient($radial-gold,#EEE);
+		}
+	}
+	#Home {
+		@include rad-gradient($radial-gold,#EEE);
+	}
+
+
+
+}
+
+
+
+/*Gets rid of hyperlink underlines*/
+
+a:link {
+	text-decoration: none;
+}
+a:hover {
+	color: #60F;
+}
+
+/*Code for Main Content*/
+
+body {
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
+.content {
+	width:$content-width;
+	position: absolute;
+	top: $content-offset-top;
+	left: $content-offset-left;
+	margin: 0 auto;
+	padding: $content-padding;
+	border: 3px solid #FFF;
+	background-color: $main-bkgrnd;
+	font-family: $main-font-stack;
+	.legoimg {
+		display: block;
+		max-width: 40%;
+		margin: auto;
+		max-height: 300px;
+		padding: 4px;
+		border: 1px solid #777;
+		border-radius: 5px;
+    	box-shadow: 10px 10px 20px #777;
+
+		#RCX {
+			width: 20%;
+		}
+		#trophy {
+			witdh: 20%;
+		}
+	}
+
+	.pcaption {
+		font-family: $main-font-stack;
+		font-style: italic;
+		text-align: center;
+		font-size: 14px;
+	}
+
+
+	.Thumbnails {
+		li {
+			display:inline-block;
+		}
+
+		img {
+		    border: 1px solid #DDD; /* Gray border */
+		    border-radius: 4px;  /* Rounded border */
+		    padding: 5px; /* Some padding */
+		    width: $thumbnail-width; /* Set a small width */
+
+			&:hover {
+		   		box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+			}
+		}
+	
+	}
+
+
+
+	.footer {
+		border-top: 1px solid black;
+		font-color:black;
+		font-size: $footer-font-size;
+		line-height: $footer-line-height;
+		text-align: center;
+		z-index:2000;
+		width: 100%;
+	}
+
+	p {
+		line-height: $p-line-height;
+	}
+
+
+	.icons {
+		margin: 0 auto;
+		margin-top: 40px;
+		font-size:25px;
+
+		.fa {
+		    padding: 20px;
+		    width: 20px;
+		    height:20px;
+		    text-align: center;
+		    text-decoration: none;
+		    border-radius: 5px;
+		}
+		.fa-github {
+			background: #333;
+			color: $main-bkgrnd;
+			display:inline-block;
+		    position: relative;
+		    left:30%;
+		}
+		.fa-linkedin {
+			background: #0077B5;
+			color: $main-bkgrnd;
+			display: inline-block;
+			position:relative;
+			left:40%;
+
+		}
+		.fa-twitter {
+		    background: #55ACEE;
+		    color: $main-bkgrnd;
+		    display:inline-block;
+		    position: relative;
+		    left: 50%;
+		}
+
+	}
+}
+
+
+
+
+h2 {
+	color: black;
+	text-align: center;
+}
+
+p {
+	color: black;
+	text-align: left;
+	font-family: Verdana;
+	padding: 20px 0px;
+
+}
+
+
+/*SLIDESHOW STUFF*/
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+    display: none;
+    img {
+    	height: 340px;
+    	border: 2px solid #333;
+    	box-shadow: 10px 10px 20px #777;
+    }
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  left: 35%;
+  width: 30%;
+  text-align: center;
+  background-color: rgba(0,0,0,.4);
+  border-radius: 6px;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
