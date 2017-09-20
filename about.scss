@@ -13,7 +13,10 @@ $nav-font-weight: 700;
 $nav-borders: 1px solid black;
 $nav-line-height: 32px;
 $nav-item-width: 100px;
-
+$nav-item-width-mobile: 100px;
+$nav-mobile-font-size: 16px;
+$nav-mobile-line-height: 24px;
+$nav-mobile-padding: 0 20px;
 
 /*Content Variables*/
 $content-width: 70%;
@@ -38,49 +41,105 @@ $radial-bkgrnd: #DDD,white,white;
 	background: radial-gradient($radialcolors); /* Standard syntax */
 }
 
+@media screen and (max-width: 500px) {
+	.Nav {
+		background-color: $main-bkgrnd;
+		width: $nav-width;
+		position: relative;
+		/*
+		top:0px;
+		left:0px;
+		*/
+		z-index:1000;
+		letter-spacing: 2px;
 
-.Nav {
-	background-color: $main-bkgrnd;
-	width: $nav-width;
-	position: fixed;
-	top:0px;
-	left:0px;
-	z-index:1000;
-	letter-spacing: 2px;
+		ul {
+			text-align: center;
+		}
 
-	ul {
-		text-align: center;
+		li {
+			display: inline-block;
+			font-family: $main-font-stack;
+			font-size:$nav-mobile-font-size;
+			text-align: center;
+			font-weight: $nav-font-weight;
+			text-transform: lowercase;
+			padding: $nav-mobile-padding;
+			border-left: $nav-borders;
+			border-right: $nav-borders;
+			line-height: $nav-mobile-line-height;
+			width: $nav-item-width-mobile;
+
+			&:hover {
+				@include rad-gradient($radial-gold,#EEE);
+			}
+		}
+		#Home {
+			@include rad-gradient($radial-gold,#EEE);
+		}
+
+
+
 	}
 
-	li {
-		display: inline-block;
-		font-family: $main-font-stack;
-		font-size:$nav-font-size;
-		text-align: center;
-		font-weight: $nav-font-weight;
-		text-transform: lowercase;
-		padding: 0 40px;
-		border-left: $nav-borders;
-		border-right: $nav-borders;
-		line-height: $nav-line-height;
-		width: $nav-item-width;
+}
+@media screen and (min-width: 501px) {
+	
 
-		&:hover {
+
+
+	.Nav {
+		background-color: $main-bkgrnd;
+		width: $nav-width;
+		@media screen and (max-width: 800px) {
+		position: relative;
+		}
+		@media screen and (min-width: 801px){
+		position: fixed;
+		}
+		top:0px;
+		left:0px;
+		z-index:1000;
+		letter-spacing: 2px;
+
+		ul {
+			text-align: center;
+		}
+
+		li {
+			display: inline-block;
+			font-family: $main-font-stack;
+			font-size:$nav-font-size;
+			text-align: center;
+			font-weight: $nav-font-weight;
+			text-transform: lowercase;
+			padding: 0 40px;
+			border-left: $nav-borders;
+			border-right: $nav-borders;
+			line-height: $nav-line-height;
+			width: $nav-item-width;
+
+			&:hover {
+				@include rad-gradient($radial-gold,#EEE);
+			}
+		}
+		#About {
 			@include rad-gradient($radial-gold,#EEE);
 		}
 	}
-	#About {
-		@include rad-gradient($radial-gold,#EEE);
-	}
 }
-
 
 /*Code for Main Content*/
 
 img {
     display: block;
     margin: auto;
-    margin-top: 78px;
+    @media screen and (max-width: 800px){
+    	margin-top: 40px;
+    }
+    @media screen and (min-width: 801px){
+    	margin-top: 78px;
+    }
     width: 15%;
 	border-radius: 50%;
 	border: 3px solid black;
@@ -109,6 +168,8 @@ body {
 	@include rad-gradient($radial-bkgrnd,#FFF);
 }
 
+
+@media screen and (min-width: 801px){
 .content {
 	width:$content-width;
 	position: absolute;
@@ -211,4 +272,103 @@ body {
 	}
 
 
+}
+}
+
+@media screen and (max-width: 800px){
+	.content {
+	width:$content-width;
+	position: relative;
+	top: $content-offset-top;
+	left: $content-offset-left/3;
+	margin: 0 auto;
+	padding: $content-padding;
+	border: 3px solid #FFF;
+	background-color: $main-bkgrnd;
+	font-family: $main-font-stack;
+
+	.leftside {
+		font-family: $main-font-stack;	
+		width:100%;
+		.credentials {
+			li {
+				padding: 8pxs;
+			}
+
+		}
+	}
+	.rightside {
+		font-family: $main-font-stack;	
+		width: 100%;
+		li {
+			padding: 8px;
+		}
+	}
+
+	.bottom {
+		width: 100%;
+		p {
+			font-family: $main-font-stack;
+			font-size: $content-font-size;
+			background-color: #DDD;
+			padding: 16px;
+			line-height: 24px;
+		}
+	}
+
+	.footer {
+		float:left;
+		clear:both;
+		border-top: 1px solid black;
+		font-color:black;
+		font-size: $footer-font-size;
+		line-height: $footer-line-height;
+		text-align: center;
+		z-index:2000;
+		width: 100%;
+	}
+
+	.icons {
+		width:100%;
+		float:left;
+		clear:both;
+		margin: 0 auto;
+		margin-top: 40px;
+		font-size:25px;
+
+		.fa {
+		    padding: 20px;
+		    width: 20px;
+		    height:20px;
+		    text-align: center;
+		    text-decoration: none;
+		    border-radius: 5px;
+		}
+
+		.fa-linkedin {
+			background: #0077B5;
+			color: white;
+			display: inline-block;
+			position:relative;
+			left:40%;
+
+		}
+		.fa-github {
+			background: #333;
+			color:white;
+			display:inline-block;
+		    position: relative;
+		    left:30%;
+		}
+		.fa-twitter {
+		    background: #55ACEE;
+		    color: white;
+		    display:inline-block;
+		    position: relative;
+		    left: 50%;
+		}
+	}
+
+
+}
 }

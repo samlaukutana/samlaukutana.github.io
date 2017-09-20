@@ -245,15 +245,21 @@
     to {
       opacity: 1; } } }
 @media screen and (min-width: 501px) {
-  /* CSS for screens that are 501 pixels or more will be put in this section */
+  /* CSS for screens that are  501 pixels or more */
   .Nav {
     background-color: white;
     width: 100%;
-    position: fixed;
     top: 0px;
     left: 0px;
     z-index: 1000;
-    letter-spacing: 2px; }
+    letter-spacing: 2px; } }
+  @media screen and (min-width: 501px) and (max-width: 800px) {
+    .Nav {
+      position: relative; } }
+  @media screen and (min-width: 501px) and (min-width: 801px) {
+    .Nav {
+      position: fixed; } }
+@media screen and (min-width: 501px) {
     .Nav ul {
       text-align: center; }
     .Nav li {

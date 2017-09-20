@@ -331,12 +331,19 @@ $p-line-height:24px;
 }
 
 @media screen and (min-width:501px) {
-  /* CSS for screens that are 501 pixels or more will be put in this section */
+  /* CSS for screens that are  501 pixels or more */
 
 	.Nav {
 		background-color: $main-bkgrnd;
 		width: $nav-width;
+
+		@media screen and (max-width: 800px) {
+		position: relative;
+		}
+		@media screen and (min-width: 801px){
 		position: fixed;
+		}
+
 		top:0px;
 		left:0px;
 		z-index:1000;
