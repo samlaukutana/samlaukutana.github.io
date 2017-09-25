@@ -26,8 +26,14 @@
       padding: 0 20px;
       border-left: 1px solid black;
       border-right: 1px solid black;
-      line-height: 24px;
-      width: 100px; }
+      line-height: 24px; } }
+    @media screen and (max-width: 500px) and (max-width: 400px) {
+      .Nav li {
+        width: 75px; } }
+    @media screen and (max-width: 500px) and (min-width: 401px) {
+      .Nav li {
+        width: 100px; } }
+@media screen and (max-width: 500px) {
       .Nav li:hover {
         background: #EEE;
         /* For browsers that do not support gradients */
